@@ -161,7 +161,7 @@ public class HostConnect implements SimpleClientListener {
 		if (msg[0].equalsIgnoreCase("loadPlayer")) {
 			this.player.setId(Integer.valueOf(msg[1]));
 			this.player.setName(msg[2]);
-			this.player.setLoginId(UUID.fromString((msg[3])));
+			this.player.setLoginId(Integer.valueOf((msg[3])));
 			this.player.setMapId(Integer.valueOf(msg[4]));
 			this.player.setClasseId(Integer.valueOf(msg[5]));
 			this.player.setHpMax(Integer.valueOf(msg[6]));
@@ -230,7 +230,7 @@ public class HostConnect implements SimpleClientListener {
 	public PasswordAuthentication getPasswordAuthentication() {
 		//String player = "admin";	String password = "admin";
 		Random rand=new Random(43);
-		String player = "player4";//+rand.nextInt(1000);	
+		String player = "player3";//+rand.nextInt(1000);	
 		String password = "player";
 		this.login = player;
 		System.out.println("Logging in as " + player);

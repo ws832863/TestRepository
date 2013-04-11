@@ -16,7 +16,7 @@ public class Player extends Component {
 	private int id;
 	private String name;
 
-	private UUID loginId;
+	private int loginId;
 	private int mapId;
 	private int classeId;
 
@@ -78,11 +78,11 @@ public class Player extends Component {
 		this.name = name;
 	}
 
-	public UUID getLoginId() {
+	public int getLoginId() {
 		return loginId;
 	}
 
-	public void setLoginId(UUID loginId) {
+	public void setLoginId(int loginId) {
 		this.loginId = loginId;
 	}
 

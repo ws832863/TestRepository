@@ -167,7 +167,7 @@ public class InGameState extends BasicGameState implements
 					// formato: "m/loggout/loginId"
 					// Remove um dos players da rede do seu jogo (Player perdeu
 					// conex鉶)
-					UUID loginId = UUID.fromString(msg[2]);
+					int loginId = Integer.valueOf(msg[2]);
 					Entity playerNetwork = selectPlayerNetwork(loginId);
 					int x = playerNetwork.getComponent(Transform.class)
 							.getTileX();
@@ -181,19 +181,19 @@ public class InGameState extends BasicGameState implements
 				} else {
 					Entity playerLocal = world.getTagManager()
 							.getEntity("Hero");
-					UUID playerLoginId = playerLocal.getComponent(Player.class)
+					int playerLoginId = playerLocal.getComponent(Player.class)
 							.getLoginId();
-					UUID playerNetworkLoginId =UUID.fromString(msg[1]);
+					int playerNetworkLoginId =Integer.valueOf(msg[1]);
 					if (playerNetworkLoginId != playerLoginId) {
 
 						// checa se estou enviando a mensagem para mim mesmo
-						if (selectPlayerNetwork(UUID.fromString(msg[1])) != null) {
+						if (selectPlayerNetwork(Integer.valueOf(msg[1])) != null) {
 							// Player j�existe, s�atualiza
 							// Formato:
 							// "m/loginId/ClasseId/PlayerName/x/y/keyArrow")
 
 							// Libera a posi玢o anterior
-							UUID loginId = UUID.fromString(msg[1]);
+							int loginId = Integer.valueOf(msg[1]);
 							Entity playerNetworkOld = selectPlayerNetwork(loginId);
 							int x = playerNetworkOld.getComponent(
 									Transform.class).getTileX();
@@ -235,7 +235,7 @@ public class InGameState extends BasicGameState implements
 								tileX = transform.getFuturePositionTileX();
 								tileY = transform.getFuturePositionTileY();
 							}
-							this.hostConnect.sendChannel("m/"+compPlayer.getLoginId().toString()+"/"+compPlayer.getClasseId()+"/"+compPlayer.getName()+"/"+tileX+"/"+tileY+"/"+position+"/", Util.CHANNEL_MAP);
+							this.hostConnect.sendChannel("m/"+compPlayer.getLoginId()+"/"+compPlayer.getClasseId()+"/"+compPlayer.getName()+"/"+tileX+"/"+tileY+"/"+position+"/", Util.CHANNEL_MAP);
 						}
 					}
 					this.hostConnect.setReceivedChannelMessage(null);
@@ -247,7 +247,7 @@ public class InGameState extends BasicGameState implements
 	public Entity addPlayerNetwork(String[] msg) {
 		// Formato: "m/loginId/ClasseId/PlayerName/x/y/keyArrow")
 		PlayerNetwork playerNetwork = new PlayerNetwork();
-		playerNetwork.setLoginId(UUID.fromString(msg[1]));
+		playerNetwork.setLoginId(Integer.valueOf(msg[1]));
 		playerNetwork.setClasseId(Integer.valueOf(msg[2]));
 		playerNetwork.setName(msg[3]);
 		int x = Integer.valueOf(msg[4]);
@@ -276,7 +276,7 @@ public class InGameState extends BasicGameState implements
 
 	public void updatePlayerNetwork(String[] msg) {
 		// Formato: "m/loginId/ClasseId/PlayerName/x/y/CharacterPosition")
-		UUID loginId = UUID.fromString(msg[1]);
+		int loginId = Integer.valueOf(msg[1]);
 		int classeId = Integer.valueOf(msg[2]);
 		String playerName = msg[3];
 		int x = Integer.valueOf(msg[4]);
@@ -314,7 +314,7 @@ public class InGameState extends BasicGameState implements
 		}
 	}
 
-	public void removePlayerNetwork(UUID loginId) {
+	public void removePlayerNetwork(int loginId) {
 		ImmutableBag<Entity> playersNetwork = world.getGroupManager()
 				.getEntities("Group: PlayerNetWork");
 		for (int i = 0; i < playersNetwork.size(); i++) {
@@ -328,7 +328,7 @@ public class InGameState extends BasicGameState implements
 		}
 	}
 
-	public Entity selectPlayerNetwork(UUID loginId) {
+	public Entity selectPlayerNetwork(int loginId) {
 		// Remove um dos players da rede do seu jogo (Player perdeu conex鉶)
 		ImmutableBag<Entity> playersNetwork = world.getGroupManager()
 				.getEntities("Group: PlayerNetWork");

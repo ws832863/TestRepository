@@ -92,7 +92,7 @@ public class MovementPlayerSystem extends EntityProcessingSystem {
 					transform.setFuturePositionTileX(transform.getTileX() - 1);
 					transform.setFuturePositionTileY(transform.getTileY());
 					// "m/loginId/ClasseId/PlayerName/x/y/keyArrow")
-					this.hostConnect.sendChannel("m/"+compPlayer.getLoginId().toString()+"/"+compPlayer.getClasseId()+"/"+compPlayer.getName()+"/"+transform.getFuturePositionTileX()+"/"+transform.getFuturePositionTileY()+"/1", Util.CHANNEL_MAP);
+					this.hostConnect.sendChannel("m/"+compPlayer.getLoginId()+"/"+compPlayer.getClasseId()+"/"+compPlayer.getName()+"/"+transform.getFuturePositionTileX()+"/"+transform.getFuturePositionTileY()+"/1", Util.CHANNEL_MAP);
 					transform.setPosition(CharacterPosition.FACE_LEFT);
 					transform.setMoving(true);
 				}
@@ -219,7 +219,7 @@ public class MovementPlayerSystem extends EntityProcessingSystem {
 				if (transform.isMoving() == false) {
 					transform.setMoving(true);
 				}
-				this.hostConnect.sendChannel("m/"+compPlayer.getLoginId().toString()+"/"+compPlayer.getClasseId()+"/"+compPlayer.getName()+"/"+transform.getFuturePositionTileX()+"/"+transform.getFuturePositionTileY()+"/"+sendPosition+"/", Util.CHANNEL_MAP);
+				this.hostConnect.sendChannel("m/"+compPlayer.getLoginId()+"/"+compPlayer.getClasseId()+"/"+compPlayer.getName()+"/"+transform.getFuturePositionTileX()+"/"+transform.getFuturePositionTileY()+"/"+sendPosition+"/", Util.CHANNEL_MAP);
 				countSteps += 1;
 			}
 		} else if (caminho != null && countSteps > caminho.getLength()) {

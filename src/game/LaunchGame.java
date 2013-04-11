@@ -9,6 +9,7 @@ import org.newdawn.slick.SlickException;
  * 
  * @author Michel Montenegro
  * 
+ * the main class
  */
 public class LaunchGame {
 
