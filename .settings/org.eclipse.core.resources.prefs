@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/game/cliente/connections/HostConnect.java=UTF-8
+encoding//src/game/cliente/core/ManagerMap.java=UTF-8
+encoding//src/game/cliente/states/InGameState.java=UTF-8
+encoding//src/game/cliente/systems/MovementPlayerSystem.java=UTF-8
+encoding//src/game/cliente/utils/Util.java=UTF-8

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/sgs-client.jar"/>
+	<classpathentry kind="lib" path="libs/slick.jar"/>
+	<classpathentry kind="lib" path="libs/artemis.jar"/>
+	<classpathentry kind="lib" path="libs/nifty-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/nifty-default-controls-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/nifty-lwjgl-renderer-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="JMMORPG_client/libs/natives"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/resources.jar"/>
+	<classpathentry kind="lib" path="libs/asm-3.2.jar"/>
+	<classpathentry kind="lib" path="libs/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/eventbus-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="libs/ibxm.jar"/>
+	<classpathentry kind="lib" path="libs/jinput.jar"/>
+	<classpathentry kind="lib" path="libs/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="libs/jogl.jar"/>
+	<classpathentry kind="lib" path="libs/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="libs/kryo-1.01.jar"/>
+	<classpathentry kind="lib" path="libs/kryonet-1.01.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="libs/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="libs/mina-core-1.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/minlog-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="libs/nifty-lwjgl-slick-renderer-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/nifty-style-black-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/phys2d-060408.jar"/>
+	<classpathentry kind="lib" path="libs/reflectasm-0.8.jar"/>
+	<classpathentry kind="lib" path="libs/sgs-shared-1.12.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-api-1.4.0.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-jdk14-1.4.0.jar"/>
+	<classpathentry kind="lib" path="libs/twl.jar"/>
+	<classpathentry kind="lib" path="libs/xpp3-1.1.4c.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
